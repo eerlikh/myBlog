@@ -1,0 +1,29 @@
+<div class="row">
+  <h2> <%= @blog.name %>  </h2>
+</div>
+
+<div class="row">
+  <a href='/'>Main Directory</a>
+</div>
+
+
+<div class="row">
+  <p>  <%= @blog.body %> </p>
+</div>
+
+<div class="row">
+  <a href="/<%= @blog.id %>/edit">Edit </a>
+</div>
+
+<div class="row">
+  <form action="/<%= @blog.id %>/edit" method="get">
+    <input type="submit" value="Edit">
+  </form>
+</div>
+
+<div class="row">
+  <form action="/<%= @blog.id %>" method="post">
+    <input type="hidden" name="_method" value ="delete">
+    <input type="submit" value="delete">
+  </form>
+</div>

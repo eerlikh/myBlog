@@ -1,0 +1,10 @@
+<h2> edit a specific blog </h2>
+
+
+
+<form action="/<%= @blog.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="blog[name]" value="<%= @blog.name %>">
+  <textarea rows="6" cols="50" type="text" name="blog[body]" value="<%= @blog.body%>"><%= @blog.body%></textarea>
+  <input type="submit" value="Update Blog">
+</form>
