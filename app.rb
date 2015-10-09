@@ -2,11 +2,10 @@
 require 'bundler'
 Bundler.require()
 
-# #connection
-# ActiveRecord::Base.establish_connection({
-#   :adapter => 'postgresql',
-#   :database => 'all_the_blogs'
-#   })
+#connection
+ActiveRecord::Base.establish_connection(
+  ENV['DATABASE_URL'] || { :adapter => 'postgresql', :database => 'all_the_blogs' }
+  )
 
 #models
 require './models/blog'
