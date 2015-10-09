@@ -3,6 +3,7 @@ development:
   database: all_the_blogs
   encoding: utf8
   pool: 5
+  
 
 production:
   adapter: postgresql
