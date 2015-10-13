@@ -5,8 +5,22 @@ body {
   background-color: black;
   height: 100%;
 }
-.container{
+
+.container {
   background-color: snow;
   height: 100%;
   overflow: auto;
+  padding: 15px;
+}
+input {
+  border: none;
+  margin: 5px;
+  padding: 5px;
+}
+.hyperlink {
+  margin-right: 20px;
+  text-decoration: none;
+}
+.row{
+  margin: 0;
 }

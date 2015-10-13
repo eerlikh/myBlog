@@ -1,36 +1,27 @@
 <h2> Welcome to my blog site </h2>
+<h3><a href="/new">New Blog Post</a></h3>
 
-<a href="/new">New Blog Post</a>
-<!-- <ul>
-  <% @blogs.each do |blog| %>
-    <li>
-      <a href="/<%= blog.id %>">
-        <%= blog.name %>
-        <%= blog.body %>
-      </a>
-    </li>
-  <% end %>
-</ul> -->
+
 <table>
 
   <% @blogs.each do |blog| %>
     <tr>
       <td>
-        <a href="/<%= blog.id %>">
+        <a class="hyperlink" href="/<%= blog.id %>">
         <%= blog.name %>
         </a>
       </td>
 
       <td>
         <form action="/<%= blog.id %>/edit" method="get">
-          <input type="submit" name="name" value="Edit">
+          <input class="listButton" type="submit" name="name" value="Edit">
         </form>
       </td>
 
       <td>
         <form action="/<%= blog.id %>" method="post">
           <input type="hidden" name="_method" value="delete">
-          <input type="submit" name="name" value="Delete">
+          <input class="listButton" type="submit" name="name" value="Delete">
         </form>
       </td>
 

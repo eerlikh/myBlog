@@ -1,10 +1,17 @@
-<h2> edit a specific blog </h2>
+<h2> Edit Blog </h2>
 
 
-
-<form action="/<%= @blog.id %>" method="post">
-  <input type="hidden" name="_method" value="put">
-  <input type="text" name="blog[name]" value="<%= @blog.name %>">
-  <textarea rows="6" cols="50" type="text" name="blog[body]" value="<%= @blog.body%>"><%= @blog.body%></textarea>
-  <input type="submit" value="Update Blog">
-</form>
+<div class="container">
+  <form action="/<%= @blog.id %>" method="post">
+    <div class="row">
+      <input type="hidden" name="_method" value="put">
+      <input type="text" name="blog[name]" value="<%= @blog.name %>">
+    </div>
+    <div class="row">
+      <textarea rows="6" cols="50" type="text" name="blog[body]" value="<%= @blog.body%>"><%= @blog.body%></textarea>
+    </div>
+    <div class="row">
+      <input type="submit" value="Update Blog">
+    </div>
+  </form>
+</div>
